@@ -1,11 +1,11 @@
-namespace InmobilariaWebAPI.Models
-{
-    public class Pago
-    {
-        public int Id { get; set; }
-        public int AlquilerId { get; set; }
-        public int NroPago { get; set; }
-        public DateTime FechaPago { get; set; }
-        public decimal Importe { get; set; }
-    }
+namespace Inmobiliaria.Api.Models;
+public class Pago {
+    public int IdPago { get; set; }
+    public DateOnly FechaPago { get; set; }
+    public decimal Monto { get; set; }
+    public string Detalle { get; set; } = "";
+    public bool Estado { get; set; }
+
+    public int IdContrato { get; set; }
+    public Contrato? Contrato { get; set; }
 }
